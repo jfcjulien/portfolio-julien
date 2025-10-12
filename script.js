@@ -1,31 +1,9 @@
-const switcher = document.querySelector(".switcher");
+const menu = document.querySelector(".fa-bars")
+const navLinks = document.querySelector(".nav-links")
 
-const trackPrevious = (element) => {
-  const radios = element.querySelectorAll('input[type="radio"]');
-  let previousValue = null;
-
-  // init first select
-  const initiallyChecked = element.querySelector('input[type="radio"]:checked');
-  if (initiallyChecked) {
-    previousValue = initiallyChecked.getAttribute("c-option");
-    element.setAttribute("c-previous", previousValue);
-  }
-
-  radios.forEach((radio) => {
-    radio.addEventListener("change", () => {
-      if (radio.checked) {
-        element.setAttribute("c-previous", previousValue ?? "");
-        previousValue = radio.getAttribute("c-option");
-      }
-    });
-  });
-};
-
-if (switcher) {
-  trackPrevious(switcher);
-}
-
-
+menu.addEventListener('click',()=>{
+navLinks.classList.toggle('mobile-menu')
+})
 
 
 document.getElementById("contactForm").addEventListener("submit", function(e) {

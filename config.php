@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";      // ou l'adresse du serveur MySQL distant
-$dbname = "portfolio_db"; // nom de ta base
-$username = "root";       // ton utilisateur MySQL
-$password = "";           // ton mot de passe MySQL
+$host = "localhost";
+$dbname = "portfolio_db";
+$username = "julien";
+$password = "8vcu35jhtk7evz45urxr";
 
 try {
   $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);

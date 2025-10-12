@@ -1,254 +1,177 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Julien Conigliaro</title>
-  <meta name="description" content="Portfolio de Julien Conigliaro, étudiant en informatique et alternant chez Team-iT.">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julien Conigliaro Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <p class="site-header__brand">
-      <a class="nav-button brand-button" href="#accueil">Julien Conigliaro</a>
-    </p>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">JULIEN</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#experiences">Expériences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+                <div class="menu">
+                    <a class="fas fa-bars" alt="menu"></a>
+                </div>
+        </nav>
+    </header>
 
-    <nav class="site-nav" aria-label="Navigation principale">
-      <ul class="nav-list">
-        <li><a class="nav-button nav-link" href="#accueil">Accueil</a></li>
-        <li><a class="nav-button nav-link" href="#skills">Compétences</a></li>
-        <li><a class="nav-button nav-link" href="#experiences">Expériences</a></li>
-        <li><a class="nav-button nav-link" href="#projets">Projets</a></li>
-        <li><a class="nav-button nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <main>
+        <h2>Je m'appelle Julien Conigliaro</h2>
+        <p>Jeune étudiant en informatique, et passionné par ce vaste domaine tout comme des sujets plus précis par exemple le développement web et applicatif, la cybersécurité ou encore l'IA. Futur éléve au sein de l'ESGI d'Aix-En-Provence et aujourd'hui en recherche d'une alternance.</p>
+        <a class="button" type="button" href="images/CV-Julien-Conigliaro.pdf" download="CV-Julien-Conigliaro.pdf">
+            <span class="button__text">Mon CV</span>
+            <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
+        </a>
+    </main>
 
+    
 
-
-
-    <aside class="site-header__controls">
-      <fieldset class="switcher" aria-label="Changer de thème">
-        <legend class="switcher__legend">Choisir un thème</legend>
-
-        <label class="switcher__option">
-          <input class="switcher__input" type="radio" name="theme" value="light" c-option="1" checked>
-          <span class="sr-only">Thème clair</span>
-          <svg class="switcher__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
-            <path fill="var(--c)" fill-rule="evenodd" d="M18 12a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 2a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" clip-rule="evenodd" />
-            <path fill="var(--c)" d="M17 6.038a1 1 0 1 1 2 0v3a1 1 0 0 1-2 0v-3ZM24.244 7.742a1 1 0 1 1 1.618 1.176L24.1 11.345a1 1 0 1 1-1.618-1.176l1.763-2.427ZM29.104 13.379a1 1 0 0 1 .618 1.902l-2.854.927a1 1 0 1 1-.618-1.902l2.854-.927ZM29.722 20.795a1 1 0 0 1-.619 1.902l-2.853-.927a1 1 0 1 1 .618-1.902l2.854.927ZM25.862 27.159a1 1 0 0 1-1.618 1.175l-1.763-2.427a1 1 0 1 1 1.618-1.175l1.763 2.427ZM19 30.038a1 1 0 0 1-2 0v-3a1 1 0 1 1 2 0v3ZM11.755 28.334a1 1 0 0 1-1.618-1.175l1.764-2.427a1 1 0 1 1 1.618 1.175l-1.764 2.427ZM6.896 22.697a1 1 0 1 1-.618-1.902l2.853-.927a1 1 0 1 1 .618 1.902l-2.853.927ZM6.278 15.28a1 1 0 1 1 .618-1.901l2.853.927a1 1 0 1 1-.618 1.902l-2.853-.927ZM10.137 8.918a1 1 0 0 1 1.618-1.176l1.764 2.427a1 1 0 0 1-1.618 1.176l-1.764-2.427Z" />
-          </svg>
-        </label>
-
-        <label class="switcher__option">
-          <input class="switcher__input" type="radio" name="theme" value="dark" c-option="2">
-          <span class="sr-only">Thème sombre</span>
-          <svg class="switcher__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
-            <path fill="var(--c)" d="M12.5 8.473a10.968 10.968 0 0 1 8.785-.97 7.435 7.435 0 0 0-3.737 4.672l-.09.373A7.454 7.454 0 0 0 28.732 20.4a10.97 10.97 0 0 1-5.232 7.125l-.497.27c-5.014 2.566-11.175.916-14.234-3.813l-.295-.483C5.53 18.403 7.13 11.93 12.017 8.77l.483-.297Zm4.234.616a8.946 8.946 0 0 0-2.805.883l-.429.234A9 9 0 0 0 10.206 22.5l.241.395A9 9 0 0 0 22.5 25.794l.416-.255a8.94 8.94 0 0 0 2.167-1.99 9.433 9.433 0 0 1-2.782-.313c-5.043-1.352-8.036-6.535-6.686-11.578l.147-.491c.242-.745.573-1.44.972-2.078Z" />
-          </svg>
-        </label>
-
-        <label class="switcher__option">
-          <input class="switcher__input" type="radio" name="theme" value="dim" c-option="3">
-          <span class="sr-only">Thème tamisé</span>
-          <svg class="switcher__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
-            <path fill="var(--c)" d="M5 21a1 1 0 0 1 1-1h24a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1ZM12 25a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1ZM15 29a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1ZM18 13a6 6 0 0 1 5.915 7h-2.041A4.005 4.005 0 0 0 18 15a4 4 0 0 0-3.874 5h-2.041A6 6 0 0 1 18 13ZM17 7.038a1 1 0 1 1 2 0v3a1 1 0 0 1-2 0v-3ZM24.244 8.742a1 1 0 1 1 1.618 1.176L24.1 12.345a1 1 0 1 1-1.618-1.176l1.763-2.427ZM29.104 14.379a1 1 0 0 1 .618 1.902l-2.854.927a1 1 0 1 1-.618-1.902l2.854-.927ZM6.278 16.28a1 1 0 1 1 .618-1.901l2.853.927a1 1 0 1 1-.618 1.902l-2.853-.927ZM10.137 9.918a1 1 0 0 1 1.618-1.176l1.764 2.427a1 1 0 0 1-1.618 1.176l-1.764-2.427Z" />
-          </svg>
-        </label>
-      </fieldset>
-    </aside>
-  </header>
-
-  <main id="accueil">
-    <section class="first" aria-labelledby="intro-title">
-      <article class="top-left card">
-        <h1 id="intro-title">Je suis Julien Conigliaro</h1>
-        <p>
-          Jeune étudiant en informatique, passionné par le développement web et applicatif, la cybersécurité
-          et l'intelligence artificielle. Élève à l'ESGI d'Aix-en-Provence et alternant au sein de Team-iT.
-        </p>
-      </article>
-
-      <aside class="top-right">
-        <figure class="image-container">
-          <img src="https://cdn.mos.cms.futurecdn.net/8KfKPUNCBj9iife7zyNVQZ-1200-80.jpg" alt="Portrait de Julien Conigliaro">
-          <aside class="info-card card-top-left" aria-hidden="true">
-            <p class="num">3+</p>
-            <p class="label">Années d'expérience</p>
-          </aside>
-
-          <aside class="info-card card-bottom-right" aria-hidden="true">
-            <p class="num">50+</p>
-            <p class="label">Projets réalisés</p>
-          </aside>
-        </figure>
-      </aside>
+    <section>
+    <h3>À propos de moi</h3>
+    <p>Je termine un cursus de 3 années de baccalauréat professionnel en systèmes numériques (au lycée Saint Eloi à Aix en Provence), où j'ai pu acquérir de nombreuses compétences, que ce soit en développement ou en réseau. Je suis quelqu'un de réfléchis, déterminé et curieux qui aime le travail d'équipe. Mes passions se résument à certains sport de raquette comme le tennis, le badmington ou encore le tennis de table. J'aime aussi beaucoup les films de science fiction, action ou aventure, lire des mangas et les jeux vidéo.</p>    
     </section>
 
-    <section id="skills" class="skills-section">
-      <h2>Compétences</h2>
-      <ul class="skills">
-        <li class="skills-items">
-          <img src="images/logo_html.png" alt="Logo HTML5">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_ccs_glass.png" alt="Logo CSS3">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_JS.png" alt="Logo JavaScript">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_vscode.png" alt="Logo Visual Studio Code">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_terminal.png" alt="Terminal Linux">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_linux.png" alt="Logo Linux">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_virtualbox.png" alt="Logo VirtualBox">
-        </li>
-        <li class="skills-items">
-          <img src="images/loco_packet_traceur.png" alt="Logo Cisco Packet Tracer">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_wix.png" alt="Logo Wix">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_figma.png" alt="Logo Figma">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_arduino-ide.png" alt="Logo Arduino IDE">
-        </li>
-        <li class="skills-items">
-          <img src="images/logo_python.png" alt="Logo Python">
-        </li>
-      </ul>
-
-      <h3>Autres compétences</h3>
-      <p>Maintenance, réparation et conseils informatiques (ordinateurs, téléphonie)</p>
-      <p>Installation de matériels réseaux (caméra, NAS, ...)</p>
+    <section id="skills">
+        <h3>Compétences</h3>
+        <div class="skills">
+            <div class="skills-items">
+                <p>HTML5</p>
+                <img src="images/logo-HTML5.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>CSS3</p>
+                <img src="images/logo-CSS3.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>JavaScript</p>
+                <img src="images/logo-JavaScript.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>Visual Studio Code</p>
+                <img src="images/logo-VScode.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>Terminal Linux</p>
+                <img src="images/logo-Linux.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>Ubuntu</p>
+                <img src="images/logo-Ubuntu.svg" alt="">
+            </div>
+            <div class="skills-items">
+                <p>VirtualBox</p>
+                <img src="images/logo-VirtualBox.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>Cisco Packet Tracer</p>
+                <img src="images/logo-cisco-packet-tracer.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>Wix</p>
+                <img src="images/logo-wix.png" alt="">
+            </div>
+        </div>
+        <h2>Autres compétences</h2>
+        <p>Maintenance, réparation et conseils informatique (ordinateurs, téléphonie)</p>
+        <p>Installation de matériels réseaux (caméra, NAS ...)</p>
     </section>
 
-    <section id="experiences" class="experiences-section">
-      <h2>Expériences</h2>
 
-      <section class="container1">
-        <article class="box1">
-          <img src="./images/logo-team-it.png" alt="Logo Team-IT">
-          <h3>Support informatique - Team-iT - Alternance</h3>
-          <p class="date">Septembre 2025 - Aujourd'hui</p>
-          <p>Support utilisateurs, gestion des incidents et suivi des installations.</p>
-        </article>
-
-        <article class="box1">
-          <img src="./images/logo-team-it.png" alt="Logo Team-IT">
-          <h3>Développement Linux - Team-iT - Stage</h3>
-          <p class="date">Février - Mars 2025</p>
-          <p>Mise en place d'environnements Linux personnalisés et rédaction de guides internes.</p>
-        </article>
-
-        <article class="box1">
-          <img src="./images/logo-team-it.png" alt="Logo Team-IT">
-          <h3>Développement web - Team-iT - Stage</h3>
-          <p class="date">Novembre 2024</p>
-          <p>Création de maquettes interactives et intégration front-end pour plusieurs projets clients.</p>
-        </article>
-
-        <article class="box1">
-          <img src="./images/logo-team-it.png" alt="Logo Team-IT">
-          <h3>Développement web - Team-iT - Stage</h3>
-          <p class="date">Juin 2024</p>
-          <p>Participation à la conception d'une application web et optimisation des performances.</p>
-        </article>
-
-        <article class="box1">
-          <img src="./images/logo-DFT.png" alt="Logo DFT Informatique">
-          <h3>Maintenance matériel informatique - DFT - Stage</h3>
-          <p class="date">Janvier - Février 2024</p>
-          <p>Maintenance hardware, réparation de postes et déploiement de solutions réseau.</p>
-        </article>
-
-        <article class="box1">
-          <img src="./images/logo_stay_connect.png" alt="Logo Stay Connect">
-          <h3>Réparation de téléphones - Stay Connect - Stage</h3>
-          <p class="date">Janvier et Mai - Juin 2024</p>
-          <p>Réparations mobiles, conseils clients et mise en place de procédures de diagnostic.</p>
-        </article>
-      </section>
+    <section id="experiences">
+        <h3>Mes différentes expériences en entreprises</h3>
+        <h2>Team-iT</h2>
+        <div class="experience-layout">
+            <div class="box image"><img src="images/logo-teamit.png" alt="image"></div>
+            <div class="box poste">Alternant</div>
+            <div class="box date">Du 08/09/25 à maintenant</div>
+            <div class="box description">Support informatique de l'entreprise</div>
+        </div>
+        <div class="experience-layout">
+            <div class="box image"><img src="images/logo-teamit.png" alt="image"></div>
+            <div class="box poste">Stagiaire</div>
+            <div class="box date">Du 20/02/25 au 20/03/25</div>
+            <div class="box description">Création d'un site de formation Linux avec des cours et des exercices, développés en HTML, CSS et JavaScript.</div>
+        </div>
+        <div class="experience-layout">
+            <div class="box image"><img src="images/logo-teamit.png" alt="image"></div>
+            <div class="box poste">Stagiaire</div>
+            <div class="box date">du 04/11/24 au 22/11/24</div>
+            <div class="box description">Modifications d'une distribution Linux (Ubuntu) à l'aide de l'outil "Cubic" pour aider les employés à se former à cette distribution. Modifications graphiques : Bootsplash, Fond d'écran et ajouts d'applications.</div>
+        </div>
+        <div class="experience-layout">
+            <div class="box image"><img src="images/logo-teamit.png" alt="image"></div>
+            <div class="box poste">Stagiaire</div>
+            <div class="box date">du 27/05/24 au 21/06/24</div>
+            <div class="box description">Retravail du site web fait sur wix de l'entreprise (ajout de catégories, ajout d'un module de réservation et dynamisation du site avec des animations hover).</div>
+        </div>
+        <h2>DFT informatique</h2>
+        <div class="experience-layout">
+            <div class="box image"><img src="images/logo-DFT.png" alt="image"></div>
+            <div class="box poste">Stagiaire</div>
+            <div class="box date">du 29/01/24 au 23/02/24</div>
+            <div class="box description">Réparation et maintenance de matériel informatique :<br/>- Ordinateurs<br/>- Imprimantes<br/>Et dépannages à domicile.</div>
+        </div>
+        <h2>Aix Stay Connect</h2>
+        <div class="experience-layout">
+            <div class="box image"><img src="images/logo-aix-stay-connect.png" alt="image"></div>
+            <div class="box poste">Stagiaire</div>
+            <div class="box date">du 30/05/23 au 23/06/24</div>
+            <div class="box description">Ventes de téléphones et réparation <br>- Écran <br>- Batterie <br>- Vitre arrière ...<br>Et mise en vente de consommable</div>
+        </div>
+        <div class="experience-layout">
+            <div class="box image"><img src="images/logo-aix-stay-connect.png" alt="image"></div>
+            <div class="box poste">Stagiaire</div>
+            <div class="box date">du 03/01/23 au 13/01/23</div>
+            <div class="box description">Ventes de téléphones et réparation <br>- Écran <br>- Caméra <br>- Vitre arrière <br> - Désoxydation</div>
+        </div>
     </section>
 
-    <aside class="sidebar" aria-label="Réseaux et documents">
-      <a href="https://github.com/jfcjulien" class="sidebar-item github" target="_blank" rel="noopener noreferrer">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg">
-            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-          </svg>
-        </span>
-        <span class="label">Github</span>
-      </a>
 
-      <a href="https://fr.linkedin.com/in/julien-conigliaro-6262a5350" class="sidebar-item code" target="_blank" rel="noopener noreferrer">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-        </span>
-        <span class="label">LinkedIn</span>
-      </a>
-
-      <a href="cv.pdf" class="sidebar-item earn" download>
-        <span class="icon" aria-hidden="true">
-          <span aria-hidden="true">CV</span>
-        </span>
-        <span class="label">Télécharger le CV</span>
-      </a>
-    </aside>
-
-    <section id="projets" class="projects-section">
-      <h2 class="section-title">mes projets</h2>
-
-      <section class="projects-container">
-        <article class="project-card">
-          <figure class="project-image">
-            <img src="images/image_servpad.png" alt="Aperçu du projet Formation Linux">
-          </figure>
-          <section class="project-content">
-            <h3>Formation Linux</h3>
-            <p>Un site web de formation Linux développé en HTML, CSS et JavaScript avec des cours et des quiz pour progresser.</p>
-            <a href="https://github.com/evomerse/Team-iT" class="project-btn" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-          </section>
-        </article>
-
-        <article class="project-card">
-          <figure class="project-image">
-            <img src="images/image site formation team-it.png" alt="Aperçu de l'application de commande">
-          </figure>
-          <section class="project-content">
-            <h3>Application de commande</h3>
-            <p>Interface en ligne connectée à Firebase Firestore, avec gestion de panier et formulaires clients.</p>
-            <a href="https://github.com/jfcjulien/jfcservpad" class="project-btn" target="_blank" rel="noopener noreferrer">Voir le projet</a>
-          </section>
-        </article>
-
-        <article class="project-card">
-          <figure class="project-image">
-            <img src="images/image cubic.png" alt="Aperçu de la distribution Ubuntu personnalisée">
-          </figure>
-          <section class="project-content">
-            <h3>Distribution Ubuntu personnalisée</h3>
-            <p>Modification d'une distribution Ubuntu avec l'outil Cubic pour faciliter la formation des employés.</p>
-            <a href="#" class="project-btn">Voir le projet</a>
-          </section>
-        </article>
-      </section>
+    <section id="projects">
+        <h3>Projets</h3>
+        <div class="projects-grid">
+            <a href="https://github.com/evomerse/Team-iT"><article class="project-card">
+                <img src="images/image site formation team-it.png" alt="" />
+                <div class="project-content">
+                    <h4>Formation Linux</h4>
+                    <p>Un site web de formation linux développé en HTML, CSS et JavaScript avec des cours et des questions pour en apprendre plus dans ce domaine.</p>
+                </div>
+            </article></a>
+            <a href="http://servpad.fr"><article class="project-card">
+                <img src="images/projet-servpad.png" alt="Projet Servpad" />
+                <div class="project-content">
+                    <h4>Servpad</h4>
+                    <p>Un projet scolaire développé en HTML, CSS et JavaScript visant à réduire le temps d’attente dans les restaurants. </p>
+                </div>
+            </article></a>
+            <article class="project-card">
+                <img src="images/image cubic.png" alt="" />
+                <div class="project-content">
+                    <h4>Distribution Ubuntu personnalisé</h4>
+                    <p>Modifications d'une distribution Linux (Ubuntu) à l'aide de l'outil "Cubic" pour aider les employés à se former à cette distribution.</p>
+                </div>
+            </article>
+        </div>
     </section>
 
     <section id="contact" class="contact-section">
         <h2>Contact</h2>
         <p class="contact-intro">
             Envie d'échanger sur un projet&nbsp;? Déposez-moi un message via ce formulaire ou écrivez-moi directement à
-            <a href="mailto:julien@example.com">julien@example.com</a>.
+            <a href="mailto:julconig297@gmail.com">julconig297@gmail.com</a>.
         </p>
 
         <!-- On enlève action="contact.php" -->
@@ -308,15 +231,32 @@
         <p id="downloadMessage" style="margin-top: 10px;"></p>
     </section>
 
+    <section class="footer" id="contact">
+        <div class="box-container">
+            <div class="box2">
+                <h3>Contact</h3>
+                <a >+33 06 80 65 78 22</a>
+                <a href="https://mail.google.com/mail/u/1/?hl=fr#inbox?compose=CllgCJNsvKZtkvlzhQKKcqkxbjTBzZffltNqjmptbjvLlMZmDgjlrbhFNrGVDvtMSTVVNZhFXmg">julconig297@gmail.com</a>
+                <a >155 Impasse du pas de Trets, 13112 La Destrousse</a>
+            </div>
+        </div>
 
+        <div class="social-links">
+                <a href="https://github.com/jfcjulien"><div id="github" class="social-btn flex-center">
+                    <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg><span>jfcjulien</span>
+                </div></a>
 
+                <a href="https://www.linkedin.com/in/julien-conigliaro-6262a5350/"><div id="linkedin" class="social-btn flex-center">
+                    <svg viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"></path></svg><span>in/Julien Conigliaro</span>
+                </div></a>
 
-  </main>
+                <a href="https://www.codedex.io/@jfcjulien"><div id="Codedex" class="social-btn flex-center">
+                    <img src="images/logo codedex.png" alt=""><span>@jfcjulien</span>
+                </div></a>
+            </div>
+        <div class="credit"> copyright © 2025</div>
+    </section>
 
-  <footer>
-    &copy; 2025 Julien Conigliaro. Tous droits réservés.
-  </footer>
-
-  <script src="script.js"></script>
 </body>
-</html>
+    <script src="script.js"></script>
+</html> 
