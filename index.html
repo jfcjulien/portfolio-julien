@@ -11,6 +11,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCiaGsCrO8NnZOZvHnsGVcrUED4Hysc_Vg",
+            authDomain: "portfolio-a238c.firebaseapp.com",
+            projectId: "portfolio-a238c",
+            storageBucket: "portfolio-a238c.firebasestorage.app",
+            messagingSenderId: "513296319665",
+            appId: "1:513296319665:web:2081641485faab115e0e90",
+            measurementId: "G-Y77PJZGQ3V"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        const contactForm = document.getElementById("contactForm");
+        contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const msgBox = document.getElementById("formMessage");
+
+        try {
+        await addDoc(collection(db, "contactMessages"), {
+            name,
+            email,
+            message,
+            date: new Date()
+        });
+
+        msgBox.textContent = "✅ Message envoyé avec succès !";
+        msgBox.style.color = "green";
+        contactForm.reset();
+        } catch (error) {
+        msgBox.textContent = "❌ Erreur : " + error.message;
+        msgBox.style.color = "red";
+        }
+    });
+    </script>
     <header>
         <nav class="navbar">
             <a href="#" class="logo">JULIEN</a>
