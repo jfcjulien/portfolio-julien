@@ -9,60 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="background.css">
 </head>
 <body>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyCiaGsCrO8NnZOZvHnsGVcrUED4Hysc_Vg",
-            authDomain: "portfolio-a238c.firebaseapp.com",
-            projectId: "portfolio-a238c",
-            storageBucket: "portfolio-a238c.firebasestorage.app",
-            messagingSenderId: "513296319665",
-            appId: "1:513296319665:web:2081641485faab115e0e90",
-            measurementId: "G-Y77PJZGQ3V"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-
-        const contactForm = document.getElementById("contactForm");
-        contactForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-        const msgBox = document.getElementById("formMessage");
-
-        try {
-        await addDoc(collection(db, "contactMessages"), {
-            name,
-            email,
-            message,
-            date: new Date()
-        });
-
-        msgBox.textContent = "✅ Message envoyé avec succès !";
-        msgBox.style.color = "green";
-        contactForm.reset();
-        } catch (error) {
-        msgBox.textContent = "❌ Erreur : " + error.message;
-        msgBox.style.color = "red";
-        }
-    });
-    </script>
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo">JULIEN</a>
+        <div class="navbar">
+            <a href="#home" class="logo">JULIEN</a>
             <div class="nav-links">
                 <ul>
                     <li><a href="#skills">Compétences</a></li>
@@ -74,12 +26,32 @@
                 <div class="menu">
                     <a class="fas fa-bars" alt="menu"></a>
                 </div>
-        </nav>
+            </div>
     </header>
+
+    <!-- Fond étoilé en arrière-plan (toujours présent) -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+
+
+    <!-- Section 1 : Écran d’accueil -->
+   <section id="home">
+        <h1 id="title">
+            <span>Portfolio</span><br>
+            <span>Julien Conigliaro</span>
+        </h1>
+
+        <figure class="portrait">
+            <img src="images/Photo pour CV rogné.jpg" alt="Photo de Julien Conigliaro">
+        </figure>
+    </section>
+
 
     <main>
         <h2>Je m'appelle Julien Conigliaro</h2>
-        <p>Jeune étudiant en informatique, et passionné par ce vaste domaine tout comme des sujets plus précis par exemple le développement web et applicatif, la cybersécurité ou encore l'IA. Futur éléve au sein de l'ESGI d'Aix-En-Provence et aujourd'hui en recherche d'une alternance.</p>
+        <p>Jeune étudiant en informatique, et passionné par ce vaste domaine tout comme des sujets plus précis par exemple le développement web et applicatif, la cybersécurité ou encore l'IA. Éléve au sein de l'ESGI d'Aix-En-Provence et aujourd'hui en alternance au sein de Team-IT.</p>
         <a class="button" type="button" href="images/CV-Julien-Conigliaro.pdf" download="CV-Julien-Conigliaro.pdf">
             <span class="button__text">Mon CV</span>
             <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
@@ -90,47 +62,51 @@
 
     <section>
     <h3>À propos de moi</h3>
-    <p>Je termine un cursus de 3 années de baccalauréat professionnel en systèmes numériques (au lycée Saint Eloi à Aix en Provence), où j'ai pu acquérir de nombreuses compétences, que ce soit en développement ou en réseau. Je suis quelqu'un de réfléchis, déterminé et curieux qui aime le travail d'équipe. Mes passions se résument à certains sport de raquette comme le tennis, le badmington ou encore le tennis de table. J'aime aussi beaucoup les films de science fiction, action ou aventure, lire des mangas et les jeux vidéo.</p>    
+    <p>Je termine un cursus de 3 années de baccalauréat professionnel en systèmes numériques (au lycée Saint Eloi à Aix en Provence), où j'ai pu acquérir de nombreuses compétences, que ce soit en développement ou en réseau. Je suis quelqu'un de réfléchis, déterminé et curieux qui aime le travail d'équipe. Mes passions se résument à certains sports de raquette, comme le tennis, le badminton ou encore le tennis de table. J'aime aussi beaucoup les films de science fiction, action ou aventure, lire des mangas et les jeux vidéo.</p>    
     </section>
 
     <section id="skills">
         <h3>Compétences</h3>
         <div class="skills">
             <div class="skills-items">
-                <p>HTML5</p>
-                <img src="images/logo-HTML5.png" alt="">
+                <img src="images/logo_html.png" alt="">
             </div>
             <div class="skills-items">
-                <p>CSS3</p>
-                <img src="images/logo-CSS3.png" alt="">
+                <img src="images/logo_ccs_glass.png" alt="">
             </div>
             <div class="skills-items">
-                <p>JavaScript</p>
-                <img src="images/logo-JavaScript.png" alt="">
+                <img src="images/logo_JS.png" alt="">
             </div>
             <div class="skills-items">
-                <p>Visual Studio Code</p>
-                <img src="images/logo-VScode.png" alt="">
+                <img src="images/logo_vscode.png" alt="">
             </div>
             <div class="skills-items">
-                <p>Terminal Linux</p>
-                <img src="images/logo-Linux.png" alt="">
+                <img src="images/logo_terminal.png" alt="">
             </div>
             <div class="skills-items">
-                <p>Ubuntu</p>
-                <img src="images/logo-Ubuntu.svg" alt="">
+                <img src="images/logo_linux.png" alt="">
             </div>
             <div class="skills-items">
-                <p>VirtualBox</p>
-                <img src="images/logo-VirtualBox.png" alt="">
+                <img src="images/logo_virtualbox.png" alt="">
             </div>
             <div class="skills-items">
-                <p>Cisco Packet Tracer</p>
-                <img src="images/logo-cisco-packet-tracer.png" alt="">
+                <img src="images/logo_packet_traceur.png" alt="">
             </div>
             <div class="skills-items">
                 <p>Wix</p>
-                <img src="images/logo-wix.png" alt="">
+                <img src="images/logo_wix.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>Arduino IDE</p>
+                <img src="images/logo_arduino-ide.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>Figma</p>
+                <img src="images/logo_figma.png" alt="">
+            </div>
+            <div class="skills-items">
+                <p>Python</p>
+                <img src="images/logo_python.png" alt="">
             </div>
         </div>
         <h2>Autres compétences</h2>
@@ -145,13 +121,13 @@
         <div class="experience-layout">
             <div class="box image"><img src="images/logo-teamit.png" alt="image"></div>
             <div class="box poste">Alternant</div>
-            <div class="box date">Du 08/09/25 à maintenant</div>
-            <div class="box description">Support informatique de l'entreprise</div>
+            <div class="box date">Depuis le 08/09/25</div>
+            <div class="box description">En charge du support informatique de l'entreprise, j’assure l’assistance technique aux utilisateurs et la gestion des incidents. Je veille au bon fonctionnement des postes, des logiciels et du réseau interne, tout en garantissant la sécurité et la performance du système informatique.</div>
         </div>
         <div class="experience-layout">
             <div class="box image"><img src="images/logo-teamit.png" alt="image"></div>
             <div class="box poste">Stagiaire</div>
-            <div class="box date">Du 20/02/25 au 20/03/25</div>
+            <div class="box date">Du 24/02/25 au 14/03/25</div>
             <div class="box description">Création d'un site de formation Linux avec des cours et des exercices, développés en HTML, CSS et JavaScript.</div>
         </div>
         <div class="experience-layout">
@@ -164,7 +140,7 @@
             <div class="box image"><img src="images/logo-teamit.png" alt="image"></div>
             <div class="box poste">Stagiaire</div>
             <div class="box date">du 27/05/24 au 21/06/24</div>
-            <div class="box description">Retravail du site web fait sur wix de l'entreprise (ajout de catégories, ajout d'un module de réservation et dynamisation du site avec des animations hover).</div>
+            <div class="box description">Restructuration du site web réalisé sur Wix pour l’entreprise, incluant l’ajout de nouvelles catégories, l’intégration d’un module de réservation et la dynamisation de l’interface grâce à des animations au survol (hover).</div>
         </div>
         <h2>DFT informatique</h2>
         <div class="experience-layout">
@@ -177,7 +153,7 @@
         <div class="experience-layout">
             <div class="box image"><img src="images/logo-aix-stay-connect.png" alt="image"></div>
             <div class="box poste">Stagiaire</div>
-            <div class="box date">du 30/05/23 au 23/06/24</div>
+            <div class="box date">du 30/05/23 au 23/06/23</div>
             <div class="box description">Ventes de téléphones et réparation <br>- Écran <br>- Batterie <br>- Vitre arrière ...<br>Et mise en vente de consommable</div>
         </div>
         <div class="experience-layout">
@@ -285,7 +261,9 @@
             <div class="box2">
                 <h3>Contact</h3>
                 <a >+33 06 80 65 78 22</a>
-                <a href="https://mail.google.com/mail/u/1/?hl=fr#inbox?compose=CllgCJNsvKZtkvlzhQKKcqkxbjTBzZffltNqjmptbjvLlMZmDgjlrbhFNrGVDvtMSTVVNZhFXmg">julconig297@gmail.com</a>
+                <a href="https://mail.google.com/mail/u/1/?hl=fr#inbox?compose=CllgCJNsvKZtkvlzhQKKcqkxbjTBzZffltNqjmptbjvLlMZmDgjlrbhFNrGVDvtMSTVVNZhFXmg"><p>Personnel :</p>julconig297@gmail.com</a><br>
+                <a href="https://outlook.office.com/mail/"><p>Professionnel :</p>julien.conigliaro@team-it.fr</a><br>
+                <a href="https://outlook.office.com/mail/"><p>Étudiant :</p>j.conigliaro@myskolae.fr</a><br>
                 <a >155 Impasse du pas de Trets, 13112 La Destrousse</a>
             </div>
         </div>

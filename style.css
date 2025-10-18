@@ -6,36 +6,48 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    width: 100vw;
-    background-image: url(images/aesthetic-planet-ocean-background-galaxy-nature-remix.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: "Lilita One", sans-serif;
-    box-sizing: border-box;
+body, html {
+  scroll-behavior: smooth;
 }
 
-html, body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+/* --- DÉGRADÉ SUR TOUS LES TITRES --- */
+h1, h2, h3, h4, h5, h6 {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Optionnel : ajoute un léger effet lumineux */
+h1, h2, h3 {
+  text-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+
+
+/* Chaque section prend toute la hauteur de l’écran */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
 
 main {
-    max-width: 900px;
-    padding: 0 24px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* occupe toute la hauteur */
-    text-align: center;
-    padding: 0 24px;
-    margin: 0 auto;
-    transform: translateY(-10%);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* avant : 100vh */
+  min-height: 100vh;
+  transform: none; /* supprime le décalage vertical */
 }
 
 main a {
@@ -128,13 +140,19 @@ main p {
 }
 
 section {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 80px 24px;
-    color: #d1d5db;
-    }
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 24px; /* plus d’espace pour respirer */
+  color: #d1d5db;
+  min-height: 100vh; /* occupe au moins une hauteur d’écran */
+  height: auto; /* s’agrandit selon le contenu */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 section h3 {
     font-weight: 700;
@@ -310,84 +328,213 @@ section h2 {
     color: #fff;
 }
 
-#experiences h2 {
-    margin-bottom: 1rem;
-    text-align: center;
-    text-decoration: underline;
+/* --- SECTION EXPÉRIENCES --- */
+#experiences {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  text-align: center;
 }
 
+#experiences h3 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 60px;
+  position: relative;
+}
 
+#experiences h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #60a5fa, #06b6d4);
+  margin: 16px auto 0 auto;
+  border-radius: 2px;
+}
+
+#experiences h2 {
+  margin: 2rem auto 1rem auto;
+  text-align: center;
+  font-size: 2rem;
+  color: #93c5fd;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* --- Disposition des expériences --- */
 .experience-layout {
   display: grid;
-  grid-template-columns: 200px 300px 300px;
+  grid-template-columns: 220px 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 16px;
-  max-width: 990px;
-  margin: 0 auto 2rem auto;
-  color: white;
+  gap: 20px;
+  align-items: stretch;
   justify-content: center;
-  filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
-}
-
-.box {
-  background-color: rgba(30, 30, 30, 0.9);
-  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
-  overflow: hidden;
-  font-size: 1.4rem;
+  padding: 20px;
+  margin: 0 auto 2.5rem auto;
+  max-width: 1000px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Image prend 2 lignes */
+.experience-layout:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Boîtes internes --- */
+.box {
+  background-color: rgba(17, 24, 39, 0.9);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+/* Image (à gauche) */
 .image {
   grid-row: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Poste et date sur la 1re ligne */
-.poste {
-  grid-column: 2;
-  grid-row: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  font-weight: bold;
+.image img:hover {
+  transform: scale(1.05);
 }
 
+/* Poste et date */
+.poste,
 .date {
-  grid-column: 3;
-  grid-row: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+  color: #f9fafb;
 }
 
-/* Description sous poste + date */
+/* Description */
 .description {
   grid-column: 2 / 4;
-  grid-row: 2;
-  height: 150px;
-  font-size: 1.2rem;
-  line-height: 1.4;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  background: rgba(31, 41, 55, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: justify;
 }
+
+/* --- Responsive --- */
+@media screen and (max-width: 900px) {
+  .experience-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .image {
+    grid-row: auto;
+  }
+
+  .poste,
+  .date,
+  .description {
+    grid-column: auto;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Cadre photo sous le titre --- */
+.portrait {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.portrait img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portrait img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
     gap: 1.5rem;
+    text-align: center;
 }
 .footer .box-container .box2 h3{
     padding: .5rem 0;
     font-size: 2.5rem;
     color: white;
+    text-align: center;
 }
 
 .footer .box-container .box2 a,
@@ -395,16 +542,8 @@ section h2 {
     display: block;
     padding: .5rem 0;
     font-size: 2rem;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #3a3a3a;
     color: white;
     
-}
-
-.footer .box-container .box2 a:hover,
-.footer .box-container .box2 p:hover { 
-    -webkit-text-stroke-color: #ffffff;
-    color: #3a3a3a;
 }
 
 .footer .credit{
@@ -539,6 +678,7 @@ section h2 {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+
 .form-field input[type="text"]:focus,
 .form-field input[type="email"]:focus,
 .form-field textarea:focus {
@@ -618,6 +758,38 @@ section h2 {
 
   main p {
     font-size: 1rem;
+  }
+
+   .experience-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .image {
+    grid-row: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .image img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+
+  .poste,
+  .date,
+  .description {
+    grid-column: auto;
+  }
+
+  .description {
+    text-align: center;
   }
 
     
